@@ -1,6 +1,6 @@
 # Tensorflow Object Detection API
 
-![https://www.dropbox.com/s/dqdegdffdkrvc37/Screenshot%202017-06-28%2011.54.03.png?dl=1](https://www.dropbox.com/s/dqdegdffdkrvc37/Screenshot%202017-06-28%2011.54.03.png?dl=1)
+![hub.dummy.ai:3000/list](https://www.dropbox.com/s/dqdegdffdkrvc37/Screenshot%202017-06-28%2011.54.03.png?dl=1)
 
 
 Creating accurate machine learning models capable of localizing and identifying
