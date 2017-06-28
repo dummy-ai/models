@@ -64,8 +64,16 @@ IMAGE_SIZE = (12, 8)
 
 app = Flask(__name__)
 
-@app.route('/encode', methods=['POST'])
-def encode():
+
+@app.route('/', methods=['GET'])
+def health_check():
+    return jsonify({
+        'status': 'OK'
+    })
+
+
+@app.route('/tensorflow/object-detection', methods=['POST'])
+def detect():
     data = request.json
 
     uid = str(uuid.uuid4())[:10]
