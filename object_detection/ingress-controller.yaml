@@ -42,6 +42,8 @@ spec:
           args:
             - /nginx-ingress-controller
             - --default-backend-service=$(POD_NAMESPACE)/default-http-backend
+            - --nginx-configmap=$(POD_NAMESPACE)/nginx-template
+            - --v=2
           # Use downward API
           env:
             - name: POD_NAME

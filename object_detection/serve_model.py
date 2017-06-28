@@ -72,7 +72,7 @@ def health_check():
     })
 
 
-@app.route('/tensorflow/object-detection', methods=['POST'])
+@app.route('/', methods=['POST'])
 def detect():
     data = request.json
 

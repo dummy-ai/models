@@ -2,7 +2,7 @@ import requests
 import base64
 import os
 
-URL = 'http://mvp.dummy.ai/tensorflow/object-detection'
+URL = 'http://35.185.215.220/tensorflow/object-detection'
 
 with open('test_images/image1.jpg', 'rb') as f:
     result = requests.post(URL, json={
