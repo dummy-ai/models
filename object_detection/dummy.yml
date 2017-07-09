@@ -1,0 +1,8 @@
+name: tf-object-detection
+version: 0.0.1
+description: a demo tensorflow object detection model
+labels: ["tensorflow", "bare"]
+image: dummyai/py3-tf-cpu
+assets:
+- ssd_mobilenet_v1_coco_11_06_2017/frozen_inference_graph.pb
+
