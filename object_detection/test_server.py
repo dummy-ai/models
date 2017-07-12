@@ -2,7 +2,7 @@ import requests
 import base64
 import os
 
-URL = 'http://kube-dev.dummy.ai:31900/tensorflow/object-detection'
+URL = 'http://kube-dev.dummy.ai:31900/model/dummy/tf-object-detection/latest'
 
 with open('test_images/image1.jpg', 'rb') as f:
     result = requests.post(URL, json={

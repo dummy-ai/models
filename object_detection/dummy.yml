@@ -1,8 +1,16 @@
+user: dummy
 name: tf-object-detection
-version: 0.0.1
-description: a demo tensorflow object detection model
-labels: ["tensorflow", "bare"]
+repo: tf-object-detection
+tag: latest
+description: a tensorflow object detection model
 image: dummyai/py3-tf-cpu
+work_path: object_detection
 assets:
 - ssd_mobilenet_v1_coco_11_06_2017/frozen_inference_graph.pb
-
+labels: ["tensorflow", "computer vision"]
+cmd:
+- cd ..
+- protoc object_detection/protos/*.proto --python_out=.
+- cd object_detection
+- pip install flask
+- python serve_model.py
