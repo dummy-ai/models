@@ -3,10 +3,14 @@ name: tf-object-detection
 repo: tf-object-detection
 tag: latest
 description: a tensorflow object detection model
-image: dummyai/py3-tf-cpu
+image: dummyai/py3-tf-gpu
 work_path: object_detection
 assets:
 - ssd_mobilenet_v1_coco_11_06_2017/frozen_inference_graph.pb
+resources:
+  memory: 512Mi
+  cpu: "1"
+  gpu: "1"
 labels: ["tensorflow", "computer vision"]
 cmd:
 - cd ..
