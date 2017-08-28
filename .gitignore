@@ -87,3 +87,15 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Specific model files
+/object_detection/ssd_mobilenet_v1_coco_11_06_2017*
+.DS_STORE
+
+*.gz
+*.swp
+*.swo
+
+compression/image_encoder/compression_residual_gru/
+compression/image_encoder/encoder/
+tutorials/image/imagenet/model/
