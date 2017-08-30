@@ -123,9 +123,8 @@ def detect():
                 'boxes': list(map(lambda l: [float(x) for x in l], boxes[0])),
                 #'scores': list(scores[0]),
                 #'classes': list(classes[0]),
-                'num_detections': int(num_detections),
+                #'num_detections': int(num_detections),
                 'vis': base64.b64encode(vis_binary).decode('utf-8'),
-                'vis_ext': 'png'
             })
 
 
