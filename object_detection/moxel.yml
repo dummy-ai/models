@@ -7,15 +7,12 @@ resources:
   memory: 512Mi
   cpu: "1"
 input_space:
-  image: Image
+  image: image
 output_space:
-  boxes: JSON
-  vis: Image
+  boxes: json
+  vis: image
+setup:
+- cd .. && protoc object_detection/protos/*.proto --python_out=.
 main:
   type: http
-  cmd:
-  - cd ..
-  - protoc object_detection/protos/*.proto --python_out=.
-  - cd object_detection
-  - pip install flask
-  - python serve_model.py
+  entrypoint: python serve_model.py

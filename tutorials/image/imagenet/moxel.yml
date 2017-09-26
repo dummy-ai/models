@@ -1,4 +1,6 @@
-image: dummyai/py3-tf-cpu
+name: inception-v3
+tag: latest
+image: moxel/py3-tf-cpu
 assets:
 - ./model/classify_image_graph_def.pb
 - ./model/imagenet_2012_challenge_label_map_proto.pbtxt
@@ -7,9 +9,11 @@ resources:
   memory: 512Mi
   cpu: "1"
 input_space:
-  img_in: Image
+  img_in: image
 output_space:
-  labels: JSON
-cmd:
+  labels: json
+setup:
 - pip install -r requirements.txt
-- python serve_model.py
+main:
+  type: http
+  entrypoint: python serve_model.py
