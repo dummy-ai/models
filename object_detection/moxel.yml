@@ -1,6 +1,6 @@
 name: tf-object-detection
 tag: latest
-image: moxel/py3-tf-cpu
+image: py3-tf-cpu
 assets:
 - ssd_mobilenet_v1_coco_11_06_2017/frozen_inference_graph.pb
 resources:
