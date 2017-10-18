@@ -1,11 +1,12 @@
 name: tf-object-detection
 tag: latest
-image: py3-tf-cpu
+image: py3-tf-gpu
 assets:
 - ssd_mobilenet_v1_coco_11_06_2017/frozen_inference_graph.pb
 resources:
   memory: 512Mi
   cpu: "1"
+  gpu: "1"
 input_space:
   image: image
 output_space:

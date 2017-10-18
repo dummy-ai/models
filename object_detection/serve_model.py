@@ -74,6 +74,7 @@ def health_check():
 
 @app.route('/', methods=['POST'])
 def detect():
+    print('Start reading image')
     data = request.json
 
     uid = str(uuid.uuid4())[:10]
@@ -84,6 +85,7 @@ def detect():
     image_f.seek(0)
 
     image = Image.open(image_f)
+    print('Start detecting object')
 
     with detection_graph.as_default():
         with tf.Session(graph=detection_graph) as sess:
@@ -119,6 +121,7 @@ def detect():
             vis_file.seek(0)
             vis_binary = vis_file.read()
 
+            print('Finished detecting object')
             return jsonify({
                 'boxes': list(map(lambda l: [float(x) for x in l], boxes[0])),
                 #'scores': list(scores[0]),
